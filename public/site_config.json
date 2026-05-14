@@ -1,0 +1,22 @@
+{
+  "siteName": "VideosPlus",
+  "paypalClientId": "",
+  "stripePublishableKey": "",
+  "stripeSecretKey": "",
+  "telegramUsername": "",
+  "videoListTitle": "Available Videos",
+  "crypto": [],
+  "emailHost": "smtp.gmail.com",
+  "emailPort": "587",
+  "emailSecure": false,
+  "emailUser": "",
+  "emailPass": "",
+  "emailFrom": "",
+  "wasabiConfig": {
+    "accessKey": "",
+    "secretKey": "",
+    "region": "eu-central-2",
+    "bucket": "videosfolder",
+    "endpoint": "https://s3.eu-central-2.wasabisys.com"
+  }
+}

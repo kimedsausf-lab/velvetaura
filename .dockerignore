@@ -1,0 +1,39 @@
+# Smaller build context → faster Railway/Nixpacks COPY and Docker import (avoids timeouts)
+node_modules
+npm-debug.log*
+yarn-error.log*
+
+.git
+.github
+.cursor
+.vscode
+.idea
+
+# Local env (Railway injects vars at runtime)
+.env
+.env.*
+!.env.example
+
+# Not needed to run this app (duplicate site / archives)
+ebooks-site
+*.rar
+*.zip
+
+# Build output — rebuilt in CI
+dist
+build
+.turbo
+.cache
+
+# Tests & docs
+coverage
+**/__tests__
+**/*.test.ts
+**/*.test.tsx
+**/*.spec.ts
+**/*.spec.tsx
+*.md
+
+# Misc
+.DS_Store
+Thumbs.db

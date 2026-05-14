@@ -1,0 +1,5 @@
+/admin /index.html 200
+/login /index.html 200
+/videos /index.html 200
+/video/* /index.html 200
+/* /index.html 200

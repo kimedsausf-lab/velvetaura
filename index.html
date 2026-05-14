@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/letter-n.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Adult Content Website" />
+    <base href="/" />
+    <title>Adult Content</title>
+    <script type="text/javascript">
+      // Handle direct route access on static sites
+      (function() {
+        // Don't redirect if we're using HashRouter with # paths
+        if (window.location.hash) return;
+        
+        const path = window.location.pathname.split('/');
+        const isRouteRequest = path.length > 1 && path[1].length > 0 && !path[1].includes('.') && 
+                              !path[1].startsWith('_vercel'); // Não redirecionar requisições do Vercel
+        
+        // Only redirect if this is a route request and not a file request
+        if (isRouteRequest && path[1] !== 'index.html') {
+          window.location.href = '/#' + window.location.pathname;
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

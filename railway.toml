@@ -1,0 +1,12 @@
+[build]
+builder = "nixpacks"
+# Nixpacks already runs `npm ci` in the install phase — do not run `npm install` again (slower + larger layers).
+# `npm prune` drops devDependencies after Vite build so the image is smaller and registry import is less likely to time out.
+buildCommand = "npm run build && npm prune --omit=dev"
+
+[deploy]
+startCommand = "NODE_ENV=production node server.js"
+healthcheckPath = "/api/health"
+healthcheckTimeout = 100
+restartPolicyType = "on_failure"
+restartPolicyMaxRetries = 10
